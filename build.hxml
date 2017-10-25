@@ -1,0 +1,9 @@
+-lib react
+-lib react-native
+
+-cp src
+-main Main
+-js App.js
+-D react_monomorphic
+-D react_noinline
+-D js-classic
