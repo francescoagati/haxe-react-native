@@ -13,20 +13,19 @@ var React_Component = require("react").Component;
 var App = $hx_exports["App"] = function(props,context) {
 	React_Component.call(this,props,context);
 };
+App.text = function(txt) {
+	return { "$$typeof" : $$tre, type : react_native_component_Text, props : { children : txt}};
+};
+App.view = function(content) {
+	return { "$$typeof" : $$tre, type : react_native_component_View, props : { children : content}};
+};
 App.__super__ = React_Component;
 App.prototype = $extend(React_Component.prototype,{
 	render: function() {
-		var tmp = React.createElement(react_native_component_Text,{ },"Test");
-		var tmp1 = React.createElement(react_native_component_Text,{ },"Test");
-		var tmp2 = React.createElement(react_native_component_Text,{ },"Test");
-		var tmp3 = React.createElement(react_native_component_Text,{ },"Test");
-		var tmp4 = React.createElement(react_native_component_Text,{ },"Test");
-		var tmp5 = React.createElement(react_native_component_Text,{ },"Test");
-		return React.createElement(react_native_component_View,{ },tmp,tmp1,tmp2,tmp3,tmp4,tmp5);
+		var content = [{ "$$typeof" : $$tre, type : react_native_component_Text, props : { children : "cippola1"}},{ "$$typeof" : $$tre, type : react_native_component_Text, props : { children : "cippola2"}},{ "$$typeof" : $$tre, type : react_native_component_Text, props : { children : "cippola3"}},{ "$$typeof" : $$tre, type : react_native_component_Text, props : { children : "cippola4"}},{ "$$typeof" : $$tre, type : react_native_component_Text, props : { children : "cippola5"}}];
+		return { "$$typeof" : $$tre, type : react_native_component_View, props : { children : content}};
 	}
 });
-var React = require("react");
-var react_ReactMacro = function() { };
 var react_native_component_Text = require("react-native").Text;
 var react_native_component_View = require("react-native").View;
 export default App;

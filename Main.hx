@@ -28,20 +28,18 @@ class Main
 @:native('App')
 class App extends ReactComponent
 {
+
+  static inline function text(txt:String) return jsx('<Text>${txt}</Text>');
+  static inline function view(content) return jsx('<View>${content}</View>');
+
     override function render()
     {
-        return jsx('
-
-            <View>
-                <Text>Test</Text>
-                <Text>Test</Text>
-                <Text>Test</Text>
-                <Text>Test</Text>
-                <Text>Test</Text>
-                <Text>Test</Text>
-            </View>
-
-
-        ');
+        return view([
+          text('cippola1'),
+          text('cippola2'),
+          text('cippola3'),
+          text('cippola4'),
+          text('cippola5')
+        ]);
     }
 }

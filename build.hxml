@@ -4,6 +4,8 @@
 -cp src
 -main Main
 -js App.js
--D react_monomorphic
--D react_noinline
 -D js-classic
+-dce full
+-D analyzer-optimize
+-D analyzer
+-D -no-debug
